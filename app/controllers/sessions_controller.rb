@@ -9,7 +9,6 @@ class SessionsController <ApplicationController
     @user = User.find_by(name: params[:user][:name])
     @user = @user.try(:authenticate, params[:user][:password])
     if @user 
-      raise params.inspect
       session[:user_id] = @user.id
       redirect_to user_path(@user)
       end
