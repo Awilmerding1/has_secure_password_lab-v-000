@@ -11,10 +11,9 @@ class SessionsController <ApplicationController
     if @user 
       session[:user_id] = @user.id
       redirect_to user_path(@user)
-      end
     else
       redirect_to(controller: 'sessions', action: 'new')
-    
+    end
 	 end
 	 
 
