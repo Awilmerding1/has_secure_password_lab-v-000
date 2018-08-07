@@ -15,7 +15,6 @@ class SessionsController <ApplicationController
       end
     else
       redirect_to(controller: 'sessions', action: 'new')
-    end
     
 	 end
 	 
